@@ -1,0 +1,28 @@
+{% load static %}
+{% block content %}
+
+<h1> Home </h1>
+
+<a href="{% url 'logout' %}"> Logout </a> 
+
+
+
+<img src="{{ user.foydalanuvchi.image.url }}">
+
+
+
+
+
+{% for i in product  %}
+
+{{ i }}
+
+{% endfor %}
+
+
+
+
+{% endblock %}
+
+
+
