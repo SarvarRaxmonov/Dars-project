@@ -1,2 +1,2 @@
 # Dars-project
-Dars qildingmi . Project asosan django dasturlash tilida yaratildi 
+Dars qildingmi . Project asosan django dasturlash tilida yozildi  
