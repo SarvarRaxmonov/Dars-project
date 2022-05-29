@@ -8,6 +8,9 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from .models import Product
 
+def MainPage(request):
+    return render(request, 'bulim/index.html')
+
 @login_required(login_url='login')
 def home(request):
     p_form = ProfileUpdateForm(instance=request.user.foydalanuvchi)
@@ -59,7 +62,7 @@ def RegisterPage(request):
             
             else:
                 messages.info(request, 'Parol yoki email xato , Parol misol : Twist2004?')  
-        return render(request,'bulim/index.html',{'form':form})
+        return render(request,'bulim/registration.html',{'form':form})
 
 def LoginPage(request):
     

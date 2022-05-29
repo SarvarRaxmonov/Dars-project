@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" >
+{% load static %} 
+{% load widget_tweaks %}
+{% block content %}
+
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Material Design Login and Registration Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,600'><link rel="stylesheet" href="{% static 'bulim/register/style.css' %}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="panel_blur"></div>
+<video id="videoBG" autoplay muted loop>
+  <source src="{% static 'bulim/register/background.mp4'%}" type="video/mp4">
+</video> 
+
+<div class="panel">
+
+
+
+    <div class="panel__form-wrapper">
+     
+     <a href="{% url 'Mainpage' %}"> 
+       <button type="button" class="panel__prev-btn" aria-label="Go back to home page" title="Go back to home page">
+          <svg fill="rgba(255,255,255,0.5)" href="{% url 'Mainpage' %}" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> 
+              <path d="M0 0h24v24H0z" fill="none"/>
+              <path d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z"/>
+            </svg>
+          </button>
+        </a>
+      <ul class="panel__headers">
+        <li class="panel__header"><a>Sign Up</a></li>
+     
+      </ul>
+
+      <div class="panel__forms">
+
+        <!-- Login Form -->
+        <form class="form panel__login-form" id="login-form" method='POST' >
+           {% csrf_token %}
+           
+           <div class="form__row">
+           {% render_field form.username type="text" class="form__input" id="email" placeholder="Username" %}
+           <span class="form__bar"></span>
+           <label for="username" class="form__label">Username</label>
+           <span class="form__error"></span>
+
+          </div>
+
+          <div class="form__row">
+             {% render_field form.email type="text" class="form__input" id="email" placeholder="Email" %}
+            <span class="form__bar"></span>
+            <label for="email" class="form__label">Email</label>
+            <span class="form__error"></span>
+          </div>
+          
+          <div class="form__row">
+            {% render_field form.password1 type="text" class="form__input" id="password" placeholder="password" %}
+           <span class="form__bar"></span>
+           <label for="password1" class="form__label">Password</label>
+           <span class="form__error"></span>
+         </div>
+       
+         <div class="form__row">
+          {% render_field form.password2 type="text" class="form__input" id="password" placeholder="Takror password" %}
+         <span class="form__bar"></span>
+         <label for="password2" class="form__label">Takror password</label>
+         <span class="form__error">
+           {% for i in messages %}
+           <br>
+           {{ i }}
+           {% endfor %}
+         </span>
+       </div>
+
+       <div class="form__row">
+        <input type="submit" class="form__submit" value="Create user">
+      </div>
+         
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js'></script><script  src="{% static 'bulim/register/script.js' %}"></script>
+
+</body>
+</html>
+
+
