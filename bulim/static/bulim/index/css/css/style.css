@@ -26,7 +26,9 @@ body {
       opacity: 1; }
 
 body, .unslate_co--site-inner {
-  background: #000; }
+  background: #000; 
+  overflow-x: hidden !important;
+}
 
 ::-moz-selection {
   background: #000;

@@ -8,6 +8,7 @@
 <head>
   <meta charset="UTF-8">
   <title>LOGIN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,600'>
 
@@ -30,12 +31,16 @@
 
 
     <div class="panel__form-wrapper">
+      <a href="{% url 'Mainpage' %}"> 
       <button type="button" class="panel__prev-btn" aria-label="Go back to home page" title="Go back to home page">
           <svg fill="rgba(255,255,255,0.5)" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> 
               <path d="M0 0h24v24H0z" fill="none"/>
               <path d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z"/>
             </svg>
           </button>
+        </a>
+
+        <img src="{% static 'bulim/register/talim.png' %}">
 
       <ul class="panel__headers">
         <li class="panel__header"><a>Sign In</a></li>
@@ -77,8 +82,10 @@
       </div>
          
         </form>
-
-      </div>
+  <div class="sign_up">
+     <p>  Sign up :  <a href="{% url 'register' %}" > Registeration </a> </p> 
+  </div>
+    </div>
     </div>
   </div>
 

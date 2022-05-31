@@ -35,6 +35,7 @@ body.offcanvas:before {
 
 body, .unslate_co--site-inner {
   background: #000;
+  overflow-x: hidden;
 }
 
 ::-moz-selection {

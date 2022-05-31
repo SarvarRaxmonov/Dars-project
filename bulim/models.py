@@ -1,7 +1,16 @@
 
+from distutils.archive_util import make_zipfile
 from django.db import models
 from django.contrib.auth.models import User
 from PIL import Image  
+
+class IndexXat(models.Model):
+     ism = models.CharField(max_length=150, default='Nomalum', null=True)
+     email = models.CharField(max_length=50, default='Nomalum', null=True)
+     savol = models.TextField(max_length=1500, default='Nomalum')
+
+
+
 
 class Product(models.Model):
 

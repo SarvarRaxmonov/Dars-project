@@ -1,3 +1,57 @@
+
+
+
+@media all and (max-width: 760px) {
+
+  .panel_blur, .panel {
+    height: 2900px;
+    overflow-y: visible;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 42px;
+}
+
+img {
+    border-style: none;
+    width: 57%;
+    margin-left: 63px !important;
+    margin-top: 321px;
+}
+
+body, a, button, input {
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.937rem;
+    line-height: 3.15;
+}
+
+
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -120,11 +174,14 @@ a:active, a:hover {
 }
 .panel__form-wrapper {
   width: 100%;
-  height: 100%;
+  height: 106%;
   padding: 10%;
   background-color: rgba(0, 0, 0, 0.5);
   overflow-y: auto;
 }
+
+
+
 @media screen and (min-width: 768px) {
   .panel__form-wrapper {
     padding: 10% 15%;
@@ -230,6 +287,25 @@ a:active, a:hover {
   font-weight: 600;
   background-color: #4CBB17;
   cursor: pointer;
+
+}
+
+img {
+  border-style: none;
+  width: 57%;
+  margin-left: 25px;
+}
+
+.form__submit2 {
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 30px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  background-color: #4CBB17;
+  cursor: pointer;
+  margin-top: -57px;
 }
 .form__retrieve-pass {
   display: block;
@@ -241,9 +317,15 @@ a:active, a:hover {
 .form__retrieve-pass:hover {
   color: #fff;
 }
+.sign_up{
+color: #4CBB17;
+}
+.sign_up a{
+  color: rgba(90, 87, 87, 0.445);
+}
 .form__error {
   position: absolute;
-  bottom: -20px;
+  bottom: -43px;
   display: block;
   width: 100%;
   height: 20px;

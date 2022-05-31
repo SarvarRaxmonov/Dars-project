@@ -6,6 +6,9 @@
 
 <head>
   <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>CodePen - Material Design Login and Registration Form</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,600'><link rel="stylesheet" href="{% static 'bulim/register/style.css' %}">
@@ -32,6 +35,9 @@
             </svg>
           </button>
         </a>
+
+        <img src="{% static 'bulim/register/talim.png' %}">
+
       <ul class="panel__headers">
         <li class="panel__header"><a>Sign Up</a></li>
      
@@ -69,18 +75,22 @@
           {% render_field form.password2 type="text" class="form__input" id="password" placeholder="Takror password" %}
          <span class="form__bar"></span>
          <label for="password2" class="form__label">Takror password</label>
-         <span class="form__error">
-           {% for i in messages %}
-           <br>
-           {{ i }}
-           {% endfor %}
-         </span>
+       
        </div>
 
        <div class="form__row">
-        <input type="submit" class="form__submit" value="Create user">
+        <input type="submit" class="form__submit2" value="Create user">
       </div>
-         
+      <div class="sign_up">
+        <p>  Sign in :  <a href="{% url 'login' %}" > Login </a> </p> 
+     </div>
+
+     <span class="form__error">
+      {% for i in messages %}
+      <br>
+      {{ i }}
+      {% endfor %}
+    </span>
         </form>
 
       </div>

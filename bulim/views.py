@@ -1,15 +1,25 @@
 import imp
 
 from django.shortcuts import render, redirect
-from .forms import CreateUserForm , UserUpdateForm , ProfileUpdateForm
+from .forms import CreateUserForm , UserUpdateForm , ProfileUpdateForm ,  IndexXatForm
 from django.views.generic import ListView 
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-from .models import Product
+from .models import Product 
 
 def MainPage(request):
-    return render(request, 'bulim/index.html')
+    form = IndexXatForm(request.POST)
+    if request.method == 'POST':
+        form = IndexXatForm(request.POST)
+        if form.is_valid():
+            form.save()
+            context={'form':form}
+            messages.success(request, "Raxmat e'tibor uchun savolingiz yuborildi")
+            return render(request,'bulim/index.html', context)
+        
+    context={'form':form}
+    return render(request, 'bulim/index.html', context)
 
 @login_required(login_url='login')
 def home(request):
